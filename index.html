@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Restaurant website template (HTML/CSS/JS)"/>
+  <title>Saffron & Stone — Restaurant</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+
+<body>
+  <!-- Top progress -->
+  <div class="progress" aria-hidden="true">
+    <div class="progress__bar" id="progressBar"></div>
+  </div>
+
+  <!-- Header -->
+  <header class="header" id="top">
+    <nav class="nav container" aria-label="Primary">
+      <a class="brand" href="#top" aria-label="Saffron & Stone">
+        <span class="brand__mark" aria-hidden="true">S</span>
+        <span class="brand__text">
+          <strong>Saffron</strong><em>&</em><strong>Stone</strong>
+        </span>
+      </a>
+
+      <button class="nav__toggle" id="navToggle" aria-controls="navMenu" aria-expanded="false">
+        <span class="sr-only">Toggle menu</span>
+        <span class="burger" aria-hidden="true"></span>
+      </button>
+
+      <div class="nav__menu" id="navMenu">
+        <a class="nav__link" href="#menu">Menu</a>
+        <a class="nav__link" href="#gallery">Gallery</a>
+        <a class="nav__link" href="#about">About</a>
+        <a class="nav__link" href="#reviews">Reviews</a>
+        <a class="btn btn--small" href="#reserve">Reserve</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <main>
+    <section class="hero">
+      <div class="container hero__grid">
+        <div class="hero__content reveal">
+          <p class="tag">Modern • Fresh • Crafted</p>
+          <h1>
+            Where <span class="grad">flavour</span> meets
+            <span class="grad2">comfort</span>.
+          </h1>
+          <p class="lead">
+            A premium restaurant template for freelancers and local businesses.
+            Fast, mobile-first, and built to convert visitors into bookings.
+          </p>
+
+          <div class="hero__actions">
+            <a class="btn" href="#reserve">Book a Table</a>
+            <a class="btn btn--ghost" href="#menu">Explore Menu</a>
+          </div>
+
+          <div class="hero__meta" aria-label="Key information">
+            <div class="meta">
+              <span class="k">Hours</span>
+              <span class="v">Mon–Sun • 12:00–23:00</span>
+            </div>
+            <div class="meta">
+              <span class="k">Location</span>
+              <span class="v">Birmingham, UK</span>
+            </div>
+            <div class="meta">
+              <span class="k">Phone</span>
+              <span class="v">+44 0000 000 000</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero__visual reveal" aria-hidden="true">
+          <div class="plate">
+            <div class="plate__ring"></div>
+            <div class="plate__food"></div>
+            <div class="chips"></div>
+          </div>
+          <div class="glow glow--a"></div>
+          <div class="glow glow--b"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Highlights -->
+    <section class="strip">
+      <div class="container strip__inner reveal">
+        <div class="pill">🍽️ Dine-in</div>
+        <div class="pill">🛵 Delivery</div>
+        <div class="pill">🥡 Takeaway</div>
+        <div class="pill">🌿 Vegan Options</div>
+        <div class="pill">⭐ 4.8 Rating</div>
+      </div>
+    </section>
+
+    <!-- Menu -->
+    <section class="section" id="menu">
+      <div class="container">
+        <div class="section__head reveal">
+          <h2>Signature menu</h2>
+          <p>Tap a category. Items update instantly (no page reload).</p>
+        </div>
+
+        <div class="menu">
+          <div class="menu__tabs reveal" role="tablist" aria-label="Menu categories">
+            <button class="tab is-active" data-cat="breakfast" role="tab" aria-selected="true">Breakfast</button>
+            <button class="tab" data-cat="lunch" role="tab" aria-selected="false">Lunch</button>
+            <button class="tab" data-cat="dinner" role="tab" aria-selected="false">Dinner</button>
+            <button class="tab" data-cat="drinks" role="tab" aria-selected="false">Drinks</button>
+          </div>
+
+          <div class="menu__grid reveal" id="menuGrid" aria-live="polite"></div>
+
+          <div class="menu__note reveal">
+            <span class="dot"></span>
+            Allergies? Ask our team. Prices shown are sample placeholders.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="section section--alt" id="gallery">
+      <div class="container">
+        <div class="section__head reveal">
+          <h2>Gallery</h2>
+          <p>Click any tile for a clean lightbox preview.</p>
+        </div>
+
+        <div class="gallery reveal" id="galleryGrid">
+          <button class="shot shot--1" data-shot="1" aria-label="Open gallery image 1"></button>
+          <button class="shot shot--2" data-shot="2" aria-label="Open gallery image 2"></button>
+          <button class="shot shot--3" data-shot="3" aria-label="Open gallery image 3"></button>
+          <button class="shot shot--4" data-shot="4" aria-label="Open gallery image 4"></button>
+          <button class="shot shot--5" data-shot="5" aria-label="Open gallery image 5"></button>
+          <button class="shot shot--6" data-shot="6" aria-label="Open gallery image 6"></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="section" id="about">
+      <div class="container about">
+        <div class="about__content reveal">
+          <h2>Built for real bookings</h2>
+          <p>
+            This template is designed like an actual restaurant website:
+            menu clarity, trust signals, and a quick reservation funnel.
+            Swap the colours, copy, and photos — ship to clients fast.
+          </p>
+
+          <div class="about__cards">
+            <div class="info">
+              <span class="i">🔥</span>
+              <div>
+                <strong>Fast & clean</strong>
+                <p>Lightweight structure. Easy to host anywhere.</p>
+              </div>
+            </div>
+
+            <div class="info">
+              <span class="i">📱</span>
+              <div>
+                <strong>Mobile-first</strong>
+                <p>Perfect layout across phones and tablets.</p>
+              </div>
+            </div>
+
+            <div class="info">
+              <span class="i">✅</span>
+              <div>
+                <strong>Client-ready</strong>
+                <p>Menu, gallery, reviews, reservation—all in.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="about__visual reveal" aria-hidden="true">
+          <div class="cardy">
+            <div class="cardy__top"></div>
+            <div class="cardy__line"></div>
+            <div class="cardy__line short"></div>
+            <div class="cardy__chips">
+              <span></span><span></span><span></span>
+            </div>
+            <div class="cardy__line"></div>
+            <div class="cardy__line short"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reviews -->
+    <section class="section section--alt" id="reviews">
+      <div class="container">
+        <div class="section__head reveal">
+          <h2>What guests say</h2>
+          <p>Lightweight slider (no libraries). Auto + manual controls.</p>
+        </div>
+
+        <div class="reviews reveal">
+          <div class="reviews__track" id="reviewsTrack">
+            <article class="review">
+              <div class="stars" aria-label="5 stars">★★★★★</div>
+              <p>“Best vibe in town. Super clean design and easy booking.”</p>
+              <div class="who">
+                <span class="av"></span>
+                <div>
+                  <strong>Sarah M.</strong>
+                  <span>Local guide</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="review">
+              <div class="stars" aria-label="5 stars">★★★★★</div>
+              <p>“Menu layout is perfect. Looks premium and loads fast.”</p>
+              <div class="who">
+                <span class="av"></span>
+                <div>
+                  <strong>James R.</strong>
+                  <span>Food blogger</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="review">
+              <div class="stars" aria-label="5 stars">★★★★★</div>
+              <p>“Exactly what we needed for our restaurant. Highly recommend.”</p>
+              <div class="who">
+                <span class="av"></span>
+                <div>
+                  <strong>Amina K.</strong>
+                  <span>Customer</span>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="reviews__controls">
+            <button class="icon-btn" id="prevReview" aria-label="Previous review">←</button>
+            <button class="icon-btn" id="nextReview" aria-label="Next review">→</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reservation -->
+    <section class="section" id="reserve">
+      <div class="container reserve">
+        <div class="reserve__info reveal">
+          <h2>Reserve a table</h2>
+          <p>
+            Demo form with validation. Hook it later to WhatsApp, email, or a booking system.
+          </p>
+
+          <div class="reserve__tiles">
+            <div class="tile">
+              <span class="k">Average time</span>
+              <span class="v">45–60 mins</span>
+            </div>
+            <div class="tile">
+              <span class="k">Group size</span>
+              <span class="v">1–8 guests</span>
+            </div>
+            <div class="tile">
+              <span class="k">Dress code</span>
+              <span class="v">Smart casual</span>
+            </div>
+          </div>
+        </div>
+
+        <form class="form reveal" id="reserveForm" novalidate>
+          <div class="form__row">
+            <label>
+              Full Name
+              <input type="text" name="name" placeholder="e.g., Dan Fred" required minlength="2"/>
+              <small class="err"></small>
+            </label>
+
+            <label>
+              Phone
+              <input type="tel" name="phone" placeholder="e.g., 07xxxxxxx" required minlength="7"/>
+              <small class="err"></small>
+            </label>
+          </div>
+
+          <div class="form__row">
+            <label>
+              Date
+              <input type="date" name="date" required />
+              <small class="err"></small>
+            </label>
+
+            <label>
+              Time
+              <input type="time" name="time" required />
+              <small class="err"></small>
+            </label>
+          </div>
+
+          <div class="form__row">
+            <label>
+              Guests
+              <select name="guests" required>
+                <option value="">Select…</option>
+                <option>1</option><option>2</option><option>3</option><option>4</option>
+                <option>5</option><option>6</option><option>7</option><option>8</option>
+              </select>
+              <small class="err"></small>
+            </label>
+
+            <label>
+              Occasion (optional)
+              <input type="text" name="occasion" placeholder="Birthday, anniversary, etc."/>
+              <small class="err"></small>
+            </label>
+          </div>
+
+          <label>
+            Notes (optional)
+            <textarea name="notes" rows="4" placeholder="Allergies, seating preference…"></textarea>
+            <small class="err"></small>
+          </label>
+
+          <button class="btn" type="submit">Confirm Reservation</button>
+          <p class="form__note" id="reserveNote" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <div class="lightbox__panel" role="dialog" aria-modal="true" aria-label="Image preview">
+      <button class="lightbox__close" id="lightboxClose" aria-label="Close">✕</button>
+      <div class="lightbox__img" id="lightboxImg" aria-hidden="true"></div>
+      <p class="lightbox__cap" id="lightboxCap">Gallery preview</p>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>© <span id="year"></span> Saffron & Stone. Template by Dan.</p>
+      <a class="link" href="#top">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
