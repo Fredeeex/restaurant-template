@@ -1,4 +1,12 @@
+---
 
+## 📸 Preview
+
+<p align="center">
+  <img src="restaurant-template.png" width="100%" />
+</p>
+
+---
 ---
 
 ## 🎯 Purpose
@@ -36,4 +44,5 @@ To deploy:
 ## 👨‍💻 Author
 
 Built by **Dan (fredeeex)**  
+
 Available for custom website development and freelance projects.
